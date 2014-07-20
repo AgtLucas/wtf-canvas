@@ -5,11 +5,11 @@ var app = (function (window, document, undefined) {
   var app = {};
 
   app.init = function () {
-
+    this.getCanvas('wtf');
   };
 
   app.getCanvas = function (id) {
-    var canvas = documen.getElementById(id);
+    var canvas = document.getElementById(id);
   };
 
   return app.init();
