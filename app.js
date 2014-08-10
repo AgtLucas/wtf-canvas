@@ -22,6 +22,13 @@ var app = (function (window, document, undefined) {
     return canvas;
   };
 
+  app.canvasContext = function (ctx) {
+    var canvasContext = this.getCanvas('wtf');
+    canvasContext.getContext(ctx);
+
+    return canvasContext;
+  };
+
   // Draw some squares on canvas
   app.drawCanvas = function () {
     var canvas = this.getCanvas('wtf'),
