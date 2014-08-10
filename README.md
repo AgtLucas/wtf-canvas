@@ -1,4 +1,3 @@
-wtf-canvas
-==========
+###WTF Canvas?
 
-Playing with Canvas 🏄
+Playing with Canvas.
