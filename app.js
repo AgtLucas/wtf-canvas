@@ -22,17 +22,19 @@ var app = (function (window, document, undefined) {
     return canvas;
   };
 
-  app.canvasContext = function (ctx) {
-    var canvasContext = this.getCanvas('wtf');
-    canvasContext.getContext(ctx);
 
-    return canvasContext;
+  // Helper to get Canvas Context
+  app.canvasContext = function (ctx) {
+    var canvas = this.getCanvas('wtf');
+    canvas = canvas.getContext(ctx);
+
+    return canvas;
   };
 
   // Draw some squares on canvas
   app.drawCanvas = function () {
-    var canvas = this.getCanvas('wtf'),
-      canvasContext = canvas.getContext('2d');
+
+    var canvasContext = this.canvasContext('2d');
 
     canvasContext.fillStyle = "rgb(200,0,0)";
     canvasContext.fillRect(10, 10, 55, 50);
