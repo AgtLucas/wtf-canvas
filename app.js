@@ -23,8 +23,8 @@ var app = (function (window, document, undefined) {
   };
 
   // Helper to get Canvas Context
-  app.canvasContext = function (ctx) {
-    var canvas = this.getCanvas('wtf');
+  app.canvasContext = function (id, ctx) {
+    var canvas = this.getCanvas(id);
     canvas = canvas.getContext(ctx);
 
     return canvas;
@@ -33,7 +33,7 @@ var app = (function (window, document, undefined) {
   // Draw some squares on canvas
   app.drawCanvas = function () {
 
-    var canvasContext = this.canvasContext('2d');
+    var canvasContext = this.canvasContext('wtf', '2d');
 
     canvasContext.fillStyle = "rgb(200,0,0)";
     canvasContext.fillRect(10, 10, 55, 50);
