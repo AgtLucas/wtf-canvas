@@ -19,6 +19,7 @@ var app = (function (window, document, undefined) {
   // Helper to get Canvas
   app.getCanvas = function (id) {
     var canvas = document.getElementById(id);
+
     return canvas;
   };
 
@@ -32,7 +33,6 @@ var app = (function (window, document, undefined) {
 
   // Draw some squares on canvas
   app.drawCanvas = function () {
-
     var canvasContext = this.canvasContext('wtf', '2d');
 
     canvasContext.fillStyle = "rgb(200,0,0)";
